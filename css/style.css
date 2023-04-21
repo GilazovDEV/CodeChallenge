@@ -105,3 +105,34 @@ main {
 #progress3 {
   stroke: #a5a3ff;
 }
+
+
+/* stats-block */
+
+.stats__block {
+  padding: 20px;
+  margin: 5px;
+  background: rgb(27, 27, 27);
+  border-radius: 15px;
+}
+
+.s-temp, .s-month {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0%;
+  padding: 0px;
+  margin-bottom: 5px;
+}
+
+.s-txt {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0%;
+  padding: 0px;
+}
