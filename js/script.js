@@ -1,40 +1,55 @@
-const circle1 = document.getElementById('circle1');
-const circle2 = document.getElementById('circle2');
-const circle3 = document.getElementById('circle3');
-const circumference = 2 * Math.PI;
+const circle1 = document.getElementById('progress1');
+const circle2 = document.getElementById('progress2');
+const circle3 = document.getElementById('progress3');
 
-circle1.style.strokeDasharray = `${circumference} ${circumference}`;
-circle1.style.strokeDashoffset = circumference;
-setProgress(circle1, 0);
+const r1 = circle1.getAttribute('r');
+const r2 = circle2.getAttribute('r');
+const r3 = circle3.getAttribute('r');
 
-circle2.style.strokeDasharray = `${circumference} ${circumference}`;
-circle2.style.strokeDashoffset = circumference;
-setProgress(circle2, 0);
+const circumference1 = 2 * Math.PI * r1;
+const circumference2 = 2 * Math.PI * r2;
+const circumference3 = 2 * Math.PI * r3;
 
-circle3.style.strokeDasharray = `${circumference} ${circumference}`;
-circle3.style.strokeDashoffset = circumference;
-setProgress(circle3, 0);
+const input1 = document.querySelector('.percente1');
+const input2 = document.querySelector('.percente2');
+const input3 = document.querySelector('.percente3');
 
-function setProgress(circle, percent) {
-  const r = circle.r.baseVal.value;
-  const offset = circumference - percent / 100 * circumference;
-  circle.style.strokeDashoffset = offset;
+circle1.style.strokeDasharray = `${circumference1} ${circumference1}`;
+circle1.style.strokeDashoffset = circumference1;
+
+circle2.style.strokeDasharray = `${circumference2} ${circumference2}`;
+circle2.style.strokeDashoffset = circumference2;
+
+circle3.style.strokeDasharray = `${circumference3} ${circumference3}`;
+circle3.style.strokeDashoffset = circumference3;
+
+function setProgress1(percent) {
+  const offset1 = circumference1 - percent / 100 * circumference1;
+  circle1.style.strokeDashoffset = offset1;
 }
 
-const input1 = document.getElementById('input1');
+function setProgress2(percent) {
+  const offset2 = circumference2 - percent / 100 * circumference2;
+  circle2.style.strokeDashoffset = offset2;
+}
+
+function setProgress3(percent) {
+  const offset3 = circumference3 - percent / 100 * circumference3;
+  circle3.style.strokeDashoffset = offset3;
+}
+
+setProgress1(20);
+setProgress2(20);
+setProgress3(20);
+
 input1.addEventListener('input', function () {
-  const percent = input1.value;
-  setProgress(circle1, percent);
+  setProgress1(input1.value);
 });
 
-const input2 = document.getElementById('input2');
 input2.addEventListener('input', function () {
-  const percent = input2.value;
-  setProgress(circle2, percent);
+  setProgress2(input2.value);
 });
 
-const input3 = document.getElementById('input3');
 input3.addEventListener('input', function () {
-  const percent = input3.value;
-  setProgress(circle3, percent);
+  setProgress3(input3.value);
 });

@@ -5,7 +5,7 @@ body {
 
 .container {
   background-color: #1e1e1e;
-  width: 540px;
+  width: 400px;
   height: 100vh;
   padding: 50px 20px;
 }
@@ -13,17 +13,22 @@ body {
 .nav {
 }
 
+main {
+  margin-top: 100px;
+}
+
 .title {
   font-family: "Golos Text";
   font-style: normal;
   font-weight: 600;
   line-height: 40px;
-  font-size: 40px;
+  font-size: 32px;
   color: #ffffff;
 }
 
 .info__block {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
 }
 
 .projects_block {
@@ -33,7 +38,7 @@ body {
   font-family: "Golos Text";
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 26px;
   margin-bottom: 0px;
 }
@@ -42,7 +47,7 @@ body {
   font-family: "Golos Text";
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 26px;
   color: #aaff76;
 }
 
@@ -60,7 +65,7 @@ body {
   font-family: "Golos Text";
   font-style: normal;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 20px;
   color: #ffffff;
 }
 
@@ -68,5 +73,35 @@ body {
   font-family: "Golos Text";
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
+}
+
+.col {
+  margin: 0px;
+  padding: 0px;
+}
+
+.progress-ring {
+  width: 200px;
+  height: 200px;
+}
+
+.progress-ring__circle {
+  stroke-width: 8;
+  stroke: #ffffff;
+  fill: none;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+
+#progress1 {
+  stroke: #aaff76;
+}
+
+#progress2 {
+  stroke: #ff547d;
+}
+
+#progress3 {
+  stroke: #a5a3ff;
 }
