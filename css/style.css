@@ -1,0 +1,72 @@
+body {
+  background-color: #111111;
+  color: #fff;
+}
+
+.container {
+  background-color: #1e1e1e;
+  width: 540px;
+  height: 100vh;
+  padding: 50px 20px;
+}
+
+.nav {
+}
+
+.title {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.info__block {
+    margin-bottom: 20px;
+}
+
+.projects_block {
+}
+
+.p-tit {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 26px;
+  margin-bottom: 0px;
+}
+
+.p-done {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  color: #aaff76;
+}
+
+.plan-done {
+  color: #ff547d;
+}
+
+.w-done {
+  color: #a5a3ff;
+}
+
+.p-quantity,
+.plan-quantity,
+.w-quantity {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.p-txt {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+}
