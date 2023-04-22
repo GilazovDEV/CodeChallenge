@@ -38,9 +38,9 @@ function setProgress3(percent) {
   circle3.style.strokeDashoffset = offset3;
 }
 
-setProgress1(20);
-setProgress2(20);
-setProgress3(20);
+setProgress1(100);
+setProgress2(100);
+setProgress3(100);
 
 input1.addEventListener('input', function () {
   setProgress1(input1.value);
@@ -53,3 +53,28 @@ input2.addEventListener('input', function () {
 input3.addEventListener('input', function () {
   setProgress3(input3.value);
 });
+
+
+// Получаем элементы DOM
+var modals = document.querySelectorAll('.modal');
+var images = document.querySelectorAll('.open-modal');
+
+// Перебираем все картинки и назначаем им обработчик события
+images.forEach(function(image) {
+  image.onclick = function() {
+    var modalId = image.getAttribute('data-modal');
+    var modal = document.getElementById(modalId);
+    modal.style.display = 'block';
+  }
+});
+
+// Назначаем обработчик события на все крестики для закрытия модального окна
+var closeButtons = document.querySelectorAll('.close');
+closeButtons.forEach(function(button) {
+  button.onclick = function() {
+    var modal = button.parentElement.parentElement;
+    modal.style.display = 'none';
+  }
+});
+
+// Назначаем обработчик события на окно для закрытия мод

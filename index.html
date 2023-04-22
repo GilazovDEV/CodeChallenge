@@ -38,10 +38,6 @@
                             <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-size="28px"
                                 font-weight="bold">500</text>
                         </svg>
-
-                        <input class="percente1" type="range" min="0" max="100" value="20">
-                        <input class="percente2" type="range" min="0" max="100" value="20">
-                        <input class="percente3" type="range" min="0" max="100" value="20">
                     </div>
                 </div>
 
@@ -79,7 +75,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col">
                         <div class="stats__block">
                             <div class="stats__txt">
@@ -93,20 +89,46 @@
 
             <section class="settings">
                 <div class="row text-center block-settings">
-                        <div class="col">
-                            <img src="" alt="">e
-                        </div>
+                    <div class="col">
+                        <img src="/img/s1.png" alt="" class="open-modal" data-modal="modal-1">
+                        <div class="modal" id="modal-1">
+                            <div class="modal-content">
+                                <input class="percente1" type="text" min="0" max="100" value="20">
 
-                        <div class="col">
-                            <img src="" alt="">w
-                        </div>
-
-                        <div class="col">
-                            <img src="" alt="">q
+                                <span class="close">&times;</span>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="col">
+                        <img src="/img/s2.png" alt="" class="open-modal" data-modal="modal-2">
+                        <div class="modal" id="modal-2">
+                            <div class="modal-content">
+                                <p class="modal-txt">Проектов сделано:</p>
+                                <input class="percente2" type="text" min="0" max="100" value="20">
+
+                                <span class="close">&times;</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <img src="/img/s3.png" alt="" class="open-modal" data-modal="modal-3">
+                        <div class="modal" id="modal-3">
+                            <div class="modal-content">
+                                <input class="percente3" type="text" min="0" max="100" value="20">
+
+                                <span class="close">&times;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
+
+        <footer class="text-center">
+            <p class="footer">Developed: <a href="https://t.me/dgilyazov" class="dev">GilazovDEV</a></p>
+        </footer>
 
     </div>
 

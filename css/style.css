@@ -6,7 +6,7 @@ body {
 .container {
   background-color: #1e1e1e;
   width: 400px;
-  height: 100vh;
+  height: auto;
   padding: 50px 20px;
 }
 
@@ -14,7 +14,7 @@ body {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .title {
@@ -106,7 +106,6 @@ main {
   stroke: #a5a3ff;
 }
 
-
 /* stats-block */
 
 .stats__block {
@@ -116,7 +115,8 @@ main {
   border-radius: 15px;
 }
 
-.s-temp, .s-month {
+.s-temp,
+.s-month {
   font-family: "Golos Text";
   font-style: normal;
   font-weight: 500;
@@ -135,4 +135,103 @@ main {
   color: #ffffff;
   margin: 0%;
   padding: 0px;
+}
+
+/* stats-info */
+
+.stats-info {
+  margin-top: 30px;
+}
+
+/* settings */
+
+.settings {
+  margin-top: 30px;
+}
+
+.block-settings {
+  padding: 20px;
+  background: rgb(27, 27, 27);
+  border-radius: 15px;
+}
+
+/* modal */
+
+/* Отображение модального окна и его содержимого */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 25%;
+  max-height: 25%;
+  background-color: #111111;
+  border-radius: 10px;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Стилизация крестика для закрытия модального окна */
+.close {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  color: #333;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.close:hover {
+  color: #ccc;
+}
+
+.modal-txt {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  
+}
+
+.percente2 {
+  width: 50px;
+  margin: auto;
+  text-align: center;
+}
+
+/* footer */
+
+footer {
+  margin-top: 50px;
+
+}
+
+.footer {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+}
+
+.dev {
+  text-decoration: none;
+  color: #333333;
 }
