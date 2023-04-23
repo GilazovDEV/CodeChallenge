@@ -52,16 +52,23 @@ main {
 }
 
 .plan-done {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
   color: #ff547d;
 }
 
-.w-done {
+.w-quantity {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
   color: #a5a3ff;
 }
 
 .p-quantity,
-.plan-quantity,
-.w-quantity {
+.plan-quantity {
   font-family: "Golos Text";
   font-style: normal;
   font-weight: 400;

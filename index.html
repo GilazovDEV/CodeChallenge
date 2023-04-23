@@ -35,8 +35,10 @@
                             <circle class="progress-ring__circle" id="progress1" cx="100" cy="100" r="68"></circle>
                             <circle class="progress-ring__circle" id="progress2" cx="100" cy="100" r="58">ааа</circle>
                             <circle class="progress-ring__circle" id="progress3" cx="100" cy="100" r="48"></circle>
-                            <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-size="28px"
-                                font-weight="bold">500</text>
+                            <text x="50%" y="50%" text-anchor="middle" fill="#ffffff" font-size="28px"
+                                font-weight="bold" class="projects-progress-info"></text> 
+                                <text x="50%" y="60%" text-anchor="middle" fill="#ffffff" font-size="14px"
+                                font-weight="normal" class="projects-progress-info">проектов</text> 
                         </svg>
                     </div>
                 </div>
@@ -44,22 +46,22 @@
                 <div class="col">
                     <div class="info__block">
                         <div class="projects_block">
-                            <p class="p-tit"><span class="p-done">40</span>/<span class="p-quantity">30</span></p>
+                            <p class="p-tit"><span class="p-done"></span>/<span class="p-quantity"></span></p>
                             <p class="p-txt">Проектов</p>
                         </div>
                     </div>
 
                     <div class="info__block">
                         <div class="projects_block">
-                            <p class="p-tit"><span class="plan-done">24</span>/<span class="plan-quantity">19</span></p>
-                            <p class="p-txt">Проектов</p>
+                            <p class="p-tit"><span class="plan-done"></span>/<span class="plan-quantity"></span></p>
+                            <p class="p-txt">План</p>
                         </div>
                     </div>
 
                     <div class="info__block">
                         <div class="projects_block">
-                            <p class="p-tit"><span class="w-done">0</span>/<span class="w-quantity">4</span></p>
-                            <p class="p-txt">Проектов</p>
+                            <p class="p-tit"><span class="w-quantity"></span></p>
+                            <p class="p-txt">Хочу сделать</p>
                         </div>
                     </div>
                 </div>
@@ -70,7 +72,7 @@
                     <div class="col">
                         <div class="stats__block">
                             <div class="stats__txt">
-                                <p class="s-month">1</p>
+                                <p class="s-month">38</p>
                                 <p class="s-txt">План на месяц</p>
                             </div>
                         </div>
@@ -79,8 +81,8 @@
                     <div class="col">
                         <div class="stats__block">
                             <div class="stats__txt">
-                                <p class="s-temp">33</p>
-                                <p class="s-txt">План на месяц</p>
+                                <p class="s-temp">5</p>
+                                <p class="s-txt">Текущий темп</p>
                             </div>
                         </div>
                     </div>
@@ -93,7 +95,13 @@
                         <img src="/img/s1.png" alt="" class="open-modal" data-modal="modal-1">
                         <div class="modal" id="modal-1">
                             <div class="modal-content">
-                                <input class="percente1" type="text" min="0" max="100" value="20">
+                                <p class="modal-txt">Всего проектов:</p>
+                                <input class="percente-project1" type="number" min="0" max="100" value="0">
+
+
+                                <p class="modal-txt">Проектов сделано:</p>
+                                <input class="percente1" type="number" min="0" max="100" value="0">
+
 
                                 <span class="close">&times;</span>
                             </div>
@@ -104,8 +112,11 @@
                         <img src="/img/s2.png" alt="" class="open-modal" data-modal="modal-2">
                         <div class="modal" id="modal-2">
                             <div class="modal-content">
-                                <p class="modal-txt">Проектов сделано:</p>
-                                <input class="percente2" type="text" min="0" max="100" value="20">
+                                <p class="modal-txt">План:</p>
+                                <input class="percente-project2" type="number" min="0" max="100" value="0">
+
+                                <p class="modal-txt">Выполненых планов:</p>
+                                <input class="percente2" type="number" min="0" max="100" value="0">
 
                                 <span class="close">&times;</span>
                             </div>
@@ -116,7 +127,8 @@
                         <img src="/img/s3.png" alt="" class="open-modal" data-modal="modal-3">
                         <div class="modal" id="modal-3">
                             <div class="modal-content">
-                                <input class="percente3" type="text" min="0" max="100" value="20">
+
+                                <input class="percente3" type="number" min="0" max="100" value="0">
 
                                 <span class="close">&times;</span>
                             </div>
