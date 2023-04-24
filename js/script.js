@@ -53,7 +53,8 @@ iProject2.addEventListener('input', updateProjectProgressTwo);
 
 
 function setProgress1(percent) {
-  const offset1 = circumference1 - percent / pQuantity.textContent * circumference1;
+  percent = parseInt(percent);
+  const offset1 = percent > pQuantity.textContent ? 0 : circumference1 - percent / pQuantity.textContent * circumference1;
   circle1.style.strokeDashoffset = offset1;
   pDone.textContent = percent; // обновляем значение в pdone
   PPI.textContent = percent;
@@ -61,13 +62,17 @@ function setProgress1(percent) {
 
 
 function setProgress2(percent) {
-  const offset2 = circumference2 - percent / planQuantity.textContent * circumference2;
+  percent = parseInt(percent);
+  const offset2 = percent > planQuantity.textContent ? 0 : circumference2 - percent / planQuantity.textContent * circumference2;
+  // const offset2 = circumference2 - percent / planQuantity.textContent * circumference2;
   circle2.style.strokeDashoffset = offset2;
   planDone.textContent = percent; // обновляем значение в planQuantity
 }
 
 function setProgress3(percent) {
-  const offset3 = circumference3 - percent / 100 * circumference3;
+  percent = parseInt(percent);
+  const offset3 = percent > pQuantity.textContent ? 0 : circumference3 - percent / pQuantity.textContent * circumference3;
+  // const offset3 = circumference3 - percent / pQuantity.textContent * circumference3;
   circle3.style.strokeDashoffset = offset3;
   wQuantity.textContent = percent; // обновляем значение в wQuantity
 }
