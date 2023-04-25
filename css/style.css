@@ -13,6 +13,18 @@ body {
 .nav {
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 180px;
+}
+
+.home, .info {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 main {
   margin-top: 50px;
 }
@@ -213,8 +225,7 @@ main {
   font-weight: 400;
   font-size: 16px;
   text-align: center;
-  color: #FFFFFF;
-  
+  color: #ffffff;
 }
 
 .percente2 {
@@ -227,7 +238,6 @@ main {
 
 footer {
   margin-top: 50px;
-
 }
 
 .footer {
