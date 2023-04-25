@@ -195,7 +195,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 25%;
-  max-height: 25%;
+  max-height: 45%;
   background-color: #111111;
   border-radius: 10px;
   padding: 50px;
@@ -226,9 +226,11 @@ main {
   font-size: 16px;
   text-align: center;
   color: #ffffff;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
-.percente2 {
+.percente1, .percente-project1, .percente2, .percente-project2, .percente3 {
   width: 50px;
   margin: auto;
   text-align: center;
