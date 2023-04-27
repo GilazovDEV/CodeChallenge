@@ -154,63 +154,6 @@ circle2.style.strokeDashoffset = circumference2;
 circle3.style.strokeDasharray = `${circumference3} ${circumference3}`;
 circle3.style.strokeDashoffset = circumference3;
 
-// function updateProjectProgress() {
-//   var infoPercent = parseInt(iProject1.value);
-//   pQuantity.textContent = infoPercent;
-//   localStorage.setItem('project1', infoPercent);
-//   setProgress1(infoPercent);
-// }
-
-// function updateProjectProgressTwo() {
-//   var infoPercent2 = parseInt(iProject2.value);
-//   planQuantity.textContent = infoPercent2;
-//   localStorage.setItem('project2', infoPercent2);
-//   setProgress2(infoPercent2);
-// }
-
-// iProject1.addEventListener('input', updateProjectProgress);
-// iProject2.addEventListener('input', updateProjectProgressTwo);
-
-// // Get the saved values from localStorage and update the progress bars
-// var savedProject1 = localStorage.getItem('project1');
-// if (savedProject1 !== null) {
-//   setProgress1(savedProject1);
-// }
-
-// var savedProject2 = localStorage.getItem('project2');
-// if (savedProject2 !== null) {
-//   setProgress2(savedProject2);
-// }
-
-// function setProgress1(percent) {
-//   percent = parseInt(percent);
-//   const savedPercent = parseInt(localStorage.getItem('project1')) || 0;
-//   const offset1 = percent > savedPercent ? 0 : circumference2 - percent / savedPercent * circumference2;
-
-//   // const offset1 = circumference1 - percent / savedPercent * circumference1;
-//   circle1.style.strokeDashoffset = offset1;
-//   pDone.textContent = percent;
-//   PPI.textContent = percent;
-//   localStorage.setItem('project1', percent);
-// }
-
-// function setProgress2(percent) {
-//   percent = parseInt(percent);
-//   const savedPercent = parseInt(localStorage.getItem('project2')) || 0;
-//   const offset2 = circumference2 - percent / 100 * circumference2;
-//   circle2.style.strokeDashoffset = offset2;
-//   planDone.textContent = percent;
-//   localStorage.setItem('project2', percent);
-// }
-
-// function setProgress3(percent) {
-//   percent = parseInt(percent);
-//   const savedPercent = parseInt(localStorage.getItem('wQuantity')) || 0;
-//   const offset3 = circumference3 - percent / 100 * circumference3;
-//   circle3.style.strokeDashoffset = offset3;
-//   wQuantity.textContent = percent;
-//   localStorage.setItem('wQuantity', percent);
-// }
 
 function updateProjectProgress() {
   var infoPercent = parseInt(iProject1.value);
@@ -232,8 +175,25 @@ function updateProjectProgressTwo() {
   setProgress2(infoPercent2);
 }
 
-iProject1.addEventListener('input', updateProjectProgress);
-iProject2.addEventListener('input', updateProjectProgressTwo);
+// iProject1.addEventListener('input', updateProjectProgress);
+// iProject2.addEventListener('input', updateProjectProgressTwo);
+
+iProject1.addEventListener('input', function() {
+  var infoPercent = parseInt(iProject1.value);
+  pQuantity.textContent = infoPercent;
+  localStorage.setItem('pQuantity1', pQuantity.textContent);
+  setProgress1(localStorage.getItem('project1'));
+});
+
+iProject2.addEventListener('input', function() {
+  var infoPercent2 = parseInt(iProject2.value);
+  planQuantity.textContent = infoPercent2;
+  localStorage.setItem('planQuantity2', planQuantity.textContent);
+  setProgress2(localStorage.getItem('project2'));
+});
+
+
+
 
 // Get the saved values from localStorage and update the progress bars
 var savedProject1 = localStorage.getItem('project1');
@@ -250,30 +210,52 @@ if (savedProject2 !== null) {
   planDone.textContent = localStorage.getItem('planDone2');
 }
 
+
+// function setProgress1(percent) {
+//   percent = parseInt(percent);
+//   const savedPercent = parseInt(localStorage.getItem('project1')) || 0;
+//   // const offset1 = circumference1 - percent / 100 * circumference1;
+//   const offset1 = percent > pQuantity.textContent ? 0 : circumference1 - percent / pQuantity.textContent * circumference1;
+//   circle1.style.strokeDashoffset = offset1;
+//   pQuantity.textContent = parseInt(localStorage.getItem('pQuantity1')) || 0;
+//   pDone.textContent = parseInt(localStorage.getItem('pDone1')) || 0;
+//   PPI.textContent = percent;
+//   localStorage.setItem('project1', percent);
+// }
+
+
+// function setProgress2(percent) {
+//   percent = parseInt(percent);
+//   const savedPercent = parseInt(localStorage.getItem('project2')) || 0;
+//   // const offset2 = circumference2 - percent / savedPercent * circumference2;
+//   const offset2 = percent > planQuantity.textContent ? 0 : circumference2 - percent / planQuantity.textContent * circumference2;
+//   circle2.style.strokeDashoffset = offset2;
+//   planDone.textContent = parseInt(localStorage.getItem('planDone2')) || 0;
+//   planQuantity.textContent = localStorage.getItem('planQuantity2') || 0;
+//   localStorage.setItem('project2', percent);
+// }
+
 function setProgress1(percent) {
   percent = parseInt(percent);
   const savedPercent = parseInt(localStorage.getItem('project1')) || 0;
-  // const offset1 = circumference1 - percent / 100 * circumference1;
-  const offset1 = percent > pQuantity.textContent ? 0 : circumference1 - percent / pQuantity.textContent * circumference1;
-  circle1.style.strokeDashoffset = offset1;
   pQuantity.textContent = parseInt(localStorage.getItem('pQuantity1')) || 0;
   pDone.textContent = parseInt(localStorage.getItem('pDone1')) || 0;
+    const offset1 = percent > pQuantity.textContent ? 0 : circumference1 - percent / pQuantity.textContent * circumference1;
+  circle1.style.strokeDashoffset = offset1;
   PPI.textContent = percent;
   localStorage.setItem('project1', percent);
 }
 
-
 function setProgress2(percent) {
   percent = parseInt(percent);
   const savedPercent = parseInt(localStorage.getItem('project2')) || 0;
-  // const offset2 = circumference2 - percent / savedPercent * circumference2;
   const offset2 = percent > planQuantity.textContent ? 0 : circumference2 - percent / planQuantity.textContent * circumference2;
+
   circle2.style.strokeDashoffset = offset2;
   planDone.textContent = parseInt(localStorage.getItem('planDone2')) || 0;
   planQuantity.textContent = localStorage.getItem('planQuantity2') || 0;
   localStorage.setItem('project2', percent);
 }
-
 
 function setProgress3(percent) {
   percent = parseInt(percent);
@@ -294,7 +276,6 @@ input1.addEventListener('input', function () {
   localStorage.setItem('input1', input1.value);
   pDone.textContent = input1.value;
   localStorage.setItem('pDone1', input1.value);
-  
 });
 
 
@@ -309,6 +290,7 @@ input3.addEventListener('input', function () {
   setProgress3(input3.value);
   localStorage.setItem('input3', input3.value);
 });
+
 
 // Get the saved values from localStorage and update the input fields
 var savedInput1 = localStorage.getItem('input1');
