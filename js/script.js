@@ -133,6 +133,8 @@ const input1 = document.querySelector(".percente1");
 const input2 = document.querySelector(".percente2");
 const input3 = document.querySelector(".percente3");
 
+const inputMonth = document.querySelector('.month');
+
 const iProject1 = document.querySelector(".percente-project1");
 const iProject2 = document.querySelector(".percente-project2");
 
@@ -175,6 +177,14 @@ function updateProjectProgressTwo() {
 }
 
 iProject1.addEventListener("input", function () {
+  let value = parseInt(iProject1.value);
+  if (value > 100) {
+    value = 100;
+  } else if (value < 0) {
+    value = 0;
+  }
+  iProject1.value = value;
+
   var infoPercent = parseInt(iProject1.value);
   pQuantity.textContent = infoPercent;
   localStorage.setItem("pQuantity1", pQuantity.textContent);
@@ -182,6 +192,14 @@ iProject1.addEventListener("input", function () {
 });
 
 iProject2.addEventListener("input", function () {
+  let value = parseInt(iProject2.value);
+  if (value > 100) {
+    value = 100;
+  } else if (value < 0) {
+    value = 0;
+  }
+  iProject2.value = value;
+  
   var infoPercent2 = parseInt(iProject2.value);
   planQuantity.textContent = infoPercent2;
   localStorage.setItem("planQuantity2", planQuantity.textContent);
@@ -248,6 +266,13 @@ setProgress2(0);
 setProgress3(0);
 
 input1.addEventListener("input", function () {
+  let value = parseInt(input1.value);
+  if (value > 100) {
+    value = 100;
+  } else if (value < 0) {
+    value = 0;
+  }
+  input1.value = value;
   setProgress1(input1.value);
   localStorage.setItem("input1", input1.value);
   pDone.textContent = input1.value;
@@ -255,6 +280,14 @@ input1.addEventListener("input", function () {
 });
 
 input2.addEventListener("input", function () {
+  let value = parseInt(input2.value);
+  if (value > 100) {
+    value = 100;
+  } else if (value < 0) {
+    value = 0;
+  }
+  input2.value = value;
+
   setProgress2(input2.value);
   localStorage.setItem("input2", input2.value);
   planDone.textContent = input2.value;
@@ -262,9 +295,39 @@ input2.addEventListener("input", function () {
 });
 
 input3.addEventListener("input", function () {
+  let value = parseInt(input3.value);
+  if (value > 100) {
+    value = 100;
+  } else if (value < 0) {
+    value = 0;
+  }
+  input3.value = value;
+
   setProgress3(input3.value);
   localStorage.setItem("input3", input3.value);
 });
+
+let month = document.querySelector('.s-month');
+inputMonth.addEventListener("input", function() {
+  let value = parseInt(inputMonth.value);
+  if (value > 100) {
+    value = 100;
+  } else if (value < 0) {
+    value = 0;
+  }
+  inputMonth.value = value;
+  localStorage.setItem("inputMonth", inputMonth.value);
+  month.innerHTML = localStorage.getItem("inputMonth");
+  console.log(inputMonth.value);
+});
+
+// Получаем сохраненное значение из LocalStorage и устанавливаем его в поле ввода и текстовый блок
+var savedInputMonth = localStorage.getItem("inputMonth");
+if (savedInputMonth !== null) {
+  inputMonth.value = savedInputMonth;
+  month.innerHTML = savedInputMonth;
+}
+
 
 // Get the saved values from localStorage and update the input fields
 var savedInput1 = localStorage.getItem("input1");
@@ -330,3 +393,9 @@ function calc() {
 }
 
 calc(); // вызов функции
+
+let alert = document.querySelector(".alert");
+
+alert.addEventListener("click", function() {
+  alert.style.display = "none";
+});

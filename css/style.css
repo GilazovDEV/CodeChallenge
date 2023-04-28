@@ -1,4 +1,6 @@
 body {
+  font-family: "Golos Text";
+  font-style: normal;
   background-color: #111111;
   color: #fff;
 }
@@ -20,7 +22,16 @@ body {
   margin-left: 180px;
 }
 
-.home, .info {
+.alert-p {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0px;
+}
+
+.home,
+.info {
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -144,6 +155,9 @@ main {
   margin: 0%;
   padding: 0px;
   margin-bottom: 5px;
+  border: none;
+  background: rgb(27, 27, 27);
+  text-align: center;
 }
 
 .s-txt {
@@ -223,17 +237,29 @@ main {
   font-family: "Golos Text";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   color: #ffffff;
-  margin-bottom: 5px;
-  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
-.percente1, .percente-project1, .percente2, .percente-project2, .percente3 {
+.month,
+.percente1,
+.percente-project1,
+.percente2,
+.percente-project2,
+.percente3 {
   width: 50px;
   margin: auto;
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
   text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+  border: none;
 }
 
 /* footer */
