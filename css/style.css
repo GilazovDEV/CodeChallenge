@@ -280,3 +280,10 @@ footer {
   text-decoration: none;
   color: #333333;
 }
+
+@media (max-width: 520px) {
+  .modal-content {
+    max-width: 80%;
+    max-height: 100%;
+  }
+}
